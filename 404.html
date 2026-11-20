@@ -5,16 +5,117 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self'; font-src 'self'; img-src 'self'; script-src 'none'; object-src 'none'; base-uri 'self'; form-action 'none'">
   <meta name="robots" content="noindex">
+  <meta name="color-scheme" content="light">
+  <meta name="theme-color" content="#f6f4ef">
   <title>Page not found | Satish Prajapati</title>
   <link rel="icon" href="/assets/media/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/assets/media/apple-touch-icon.png">
+  <link rel="preload" href="/assets/fonts/fraunces.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/assets/fonts/inter.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/assets/css/style.css">
 </head>
-<body>
-  <main class="wrap section">
-    <p class="eyebrow">404</p>
-    <h1 class="section__title">This page doesn't exist.</h1>
-    <p class="section__intro">The link may be old or mistyped.</p>
-    <p class="hero__actions"><a class="btn btn--accent" href="/">Go to the homepage</a></p>
+<body class="page-404">
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="header header--static">
+    <div class="wrap header__bar">
+      <a class="brand" href="/" aria-label="Satish Prajapati, homepage">
+        <span class="brand__mark" aria-hidden="true">SP</span>
+        <span class="brand__name">Satish Prajapati</span>
+      </a>
+      <nav class="nav" aria-label="Main">
+        <ul class="nav__links">
+          <li><a href="/#work">Work</a></li>
+          <li><a href="/#method">How I work</a></li>
+          <li><a href="/#experience">Experience</a></li>
+          <li><a href="/#about">About</a></li>
+        </ul>
+        <a class="btn btn--sm btn--ink nav__cta" href="/#contact">Get in touch</a>
+        <details class="nav__menu">
+          <summary class="nav__toggle" aria-label="Menu"><span></span><span></span></summary>
+          <ul class="nav__sheet">
+            <li><a href="/#work">Work</a></li>
+            <li><a href="/#method">How I work</a></li>
+            <li><a href="/#experience">Experience</a></li>
+            <li><a href="/#about">About</a></li>
+            <li><a class="nav__sheet-cta" href="/#contact">Get in touch <span aria-hidden="true">&rarr;</span></a></li>
+          </ul>
+        </details>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="notfound wrap">
+    <div class="notfound__copy">
+      <p class="notfound__code" aria-hidden="true">4<em>0</em>4</p>
+      <p class="eyebrow">Page not found</p>
+      <h1 class="notfound__title">This page didn't make it to <em>launch.</em></h1>
+      <p class="notfound__lede">The link may be outdated, mistyped, or pointing at something that was moved during the redesign. Everything that shipped is still live, so here's the fastest way back on track.</p>
+      <p class="hero__actions">
+        <a class="btn btn--accent" href="/"><span aria-hidden="true">&larr;</span> Back to homepage</a>
+        <a class="btn btn--outline" href="/#work">See selected work</a>
+      </p>
+    </div>
+
+    <div class="scene" aria-label="Pages on this site">
+      <div class="stack">
+        <span class="stack__sheet stack__sheet--back" aria-hidden="true"></span>
+        <span class="stack__sheet" aria-hidden="true"></span>
+        <div class="board">
+          <div class="board__head">
+            <p class="board__title">Site status</p>
+            <p class="board__sub">Where you tried to go, and what's live</p>
+          </div>
+          <div class="board__row board__row--missing">
+            <div>
+              <p class="board__name">The page you requested</p>
+              <p class="board__type">Not on the roadmap</p>
+            </div>
+            <span class="status status--missing">Not found</span>
+          </div>
+          <a class="board__row board__row--link" href="/">
+            <div>
+              <p class="board__name">Homepage</p>
+              <p class="board__type">Overview, highlights and stats</p>
+            </div>
+            <span class="status status--live">Live</span>
+          </a>
+          <a class="board__row board__row--link" href="/#work">
+            <div>
+              <p class="board__name">Selected work</p>
+              <p class="board__type">AI, FinTech and e&#8209;commerce case studies</p>
+            </div>
+            <span class="status status--live">Live</span>
+          </a>
+          <a class="board__row board__row--link" href="/#experience">
+            <div>
+              <p class="board__name">Experience</p>
+              <p class="board__type">7+ years of delivery</p>
+            </div>
+            <span class="status status--live">Live</span>
+          </a>
+          <a class="board__row board__row--link" href="/#contact">
+            <div>
+              <p class="board__name">Contact</p>
+              <p class="board__type">Email, phone or LinkedIn</p>
+            </div>
+            <span class="status status--live">Live</span>
+          </a>
+          <p class="board__legend">Think something's broken? <a href="mailto:satishp9098@gmail.com">Let me know</a> and I'll fix it.</p>
+        </div>
+      </div>
+    </div>
   </main>
+
+  <footer class="footer">
+    <div class="wrap footer__inner">
+      <p>&copy; 2026 Satish Prajapati</p>
+      <p class="footer__links">
+        <a href="https://www.linkedin.com/in/satish-prajapati-pm/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a href="mailto:satishp9098@gmail.com">Email</a>
+        <a href="https://wa.me/919574543124" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+      </p>
+    </div>
+  </footer>
 </body>
 </html>
