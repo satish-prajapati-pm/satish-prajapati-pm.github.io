@@ -198,6 +198,7 @@ a:hover { color: var(--accent-dark); }
 }
 .hero > * { min-width: 0; }
 .hero__meta { display: flex; align-items: center; gap: 10px; margin-bottom: 28px; font-size: 15px; color: var(--ink-3); }
+.hero__name { font-weight: 600; color: var(--ink); }
 .hero__title {
   max-width: 14ch;
   font-family: var(--serif);
