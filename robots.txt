@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://satish-prajapati-pm.github.io/sitemap.xml
