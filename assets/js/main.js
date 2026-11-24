@@ -108,27 +108,35 @@ function animateOnScroll() {
   onceVisible($$(".decision"), decide, { threshold: 0.4 });
 }
 
+// the real number never leaves the DOM (screen readers and search engines read it);
+// only a decorative aria-hidden copy counts up, then gets removed
 function countUp(el) {
   const target = Number(el.dataset.count);
   const duration = 1400;
+  const shown = document.createElement("span");
+  shown.setAttribute("aria-hidden", "true");
+  shown.textContent = 0;
+  el.classList.add("sr-only");
+  el.after(shown);
   let start;
   let finished = false;
 
   const finish = () => {
+    if (finished) return;
     finished = true;
-    el.textContent = target;
+    shown.remove();
+    el.classList.remove("sr-only");
   };
 
   const tick = (now) => {
     if (finished) return;
     start ??= now;
     const progress = Math.min((now - start) / duration, 1);
-    el.textContent = Math.round(target * (1 - (1 - progress) ** 4));
+    shown.textContent = Math.round(target * (1 - (1 - progress) ** 4));
     if (progress < 1) requestAnimationFrame(tick);
     else finish();
   };
 
-  el.textContent = 0;
   requestAnimationFrame(tick);
   // rAF pauses in background tabs; make sure the real number always lands
   setTimeout(finish, duration + 200);
